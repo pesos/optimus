@@ -26,3 +26,8 @@ The philosophy, tech stack, coding guidelines are available in [wiki](https://gi
   * Choose an issue you would like to close  
   * Comment on the issue that you intend to work on it (to avoid conflicts)  
   * Follow steps in (1)  
+
+
+### Authors
+* [Shrikrishna Holla](https://github.com/shrikrishnaholla/)  
+* Would you like your name here? Go ahead, [fork it!](https://github.com/pesos/optimus/fork)  
