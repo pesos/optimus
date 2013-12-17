@@ -12,7 +12,7 @@ The philosophy, tech stack, coding guidelines are available in [wiki](https://gi
 
 1. Adding a feature  
   * [Create a fork of this project](https://help.github.com/articles/fork-a-repo)  
-  * [Setup to sync from main repo](http://en.wikipedia.org/wiki/Transformers)  
+  * [Setup to sync from main repo](https://help.github.com/articles/syncing-a-fork)  
   * [Make a development branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository)  
   * Add your feature  
   * Test it  
