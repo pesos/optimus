@@ -58,4 +58,3 @@ exports.readlog = function(number, Callback) {
 	    }
 	});
 };
-
