@@ -1,4 +1,5 @@
-var irc = require('irc');
+var irc = require('irc'),
+	view = require('./view');
 
 var botOpts = {
     userName: 'OptimusPrime',
@@ -24,7 +25,4 @@ var botOpts = {
 
 var optimusbot = new irc.Client('irc.freenode.net', 'optimusbot', botOpts);
 
-optimusbot.addListener('message', function (from, to, message) {
-    console.log(from + ' => ' + to + ': ' + message);
-    optimusbot.say(to, message)
-});
+view(optimusbot, function() {});
