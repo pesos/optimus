@@ -1,0 +1,37 @@
+{
+  "name": "optimusbot",
+  "version": "0.1.0",
+  "description": "Optimus is a P.R.I.M.E. (Pseudo Robotic Irc Messaging Entity). He is being developed to monitor the logs and provide assistance in IRC channels",
+  "main": "index.js",
+  "dependencies": {
+    "caterpillar": "~2.0.7",
+    "caterpillar-filter": "~2.0.3",
+    "caterpillar-human": "~2.1.1",
+    "elasticsearch": "~1.0.3",
+    "irc": "~0.3.6",
+    "node-schedule": "~0.1.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pesos/optimus.git"
+  },
+  "keywords": [
+    "IRC",
+    "irc",
+    "bot",
+    "ircbot",
+    "mvc",
+    "optimus",
+    "pesos"
+  ],
+  "author": "PES OpenSource community <pesos@pes.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pesos/optimus/issues"
+  },
+  "homepage": "https://github.com/pesos/optimus"
+}

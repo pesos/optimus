@@ -7,6 +7,14 @@ Optimus is a P.R.I.M.E. (Pseudo Robotic Irc Messaging Entity). He is being devel
 
 The attempt here is to write an IRC bot, but at the same time try to give it a personality, that of the character [Optimus Prime](http://en.wikipedia.org/wiki/Optimus_Prime) in [Transformers](http://en.wikipedia.org/wiki/Transformers) series  
 
+###Installation
+1. Clone the repository and change to the project directory
+2. Run ```npm install```
+3. Run ```gem install haste``` to install the haste client
+4. Download and install the latest version of [ElasticSearch](http://www.elasticsearch.org/download/)
+5. Run ```node index.js```. The bot will have connected to the set channels and started logging
+
+
 ###Contributing  
 The philosophy, tech stack, coding guidelines are available in [wiki](https://github.com/pesos/optimus/wiki)  
 
