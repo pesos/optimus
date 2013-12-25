@@ -3,7 +3,7 @@
 var commandpresets = [
 	{
 		regex	: /!logs?[ ][0-9]+$/i,
-		op 		: 'lastnlogs'
+		op 		: 'logrequest'
 	}
 ];
 

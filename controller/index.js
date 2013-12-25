@@ -1,15 +1,25 @@
 var model = require('../model');
 var parser = require('./parser');
+var eventManager = require('../util').eventManager;
 
-exports.processmessage = function(from , channel, message, Callback) {
+exports.init = function() {
+
+	/* Process new message */
+	eventManager.on('newmessage', function(from, to, message) {
+		processmessage(from, to, message, function(reply) {
+			eventManager.emit('reply', from, to, reply);
+		});
+	});
+};
+
+function processmessage (from, channel, message, Callback) {
 	var parsedmsg = parser(message);
 	switch(parsedmsg) {
-	case 'lastnlogs':
-		model.readlog(message.split(' ')[1], Callback);
+	case 'logrequest':
+		model.readlog(channel, message.split(' ')[1], Callback);
 		break;
 	default:
+		model.writelog(from, channel, message, Callback);
 		break;
 	};
-	message = '[' + (new Date()).toISOString() + ']:\t' + from + ':\t' + message + '\n';
-	model.writelog(message, Callback);
-}
+};

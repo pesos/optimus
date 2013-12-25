@@ -9,20 +9,22 @@ var logger   = require('caterpillar').createLogger({level:7});
 var filter   = require('caterpillar-filter').createFilter();
 var human    = require('caterpillar-human').createHuman();
 var fs       = require('fs');
-var schedule = require('../util').scheduleTask;
+var schedule = require('../util').schedule;
+var makeFilename = require('../util').makeFilename;
+var config 	 = require('../config').debuglogarchive;
 var writeStream;
 
 // Pipe to filter to human to stdout
 logger.pipe(filter).pipe(human).pipe(process.stdout);
-if (!fs.existsSync('./debuglogger/debuglogs')) {
-	fs.mkdirSync('./debuglogger/debuglogs');
+if (!fs.existsSync(config.location)) {
+	fs.mkdirSync(config.location);
 }
 
-writeStream = fs.createWriteStream('./debuglogger/debuglogs/debug.log');
+writeStream = fs.createWriteStream(makeFilename(config));
 logger.pipe(writeStream);
 
 /* For most cases, the default level can be used.
-However, if needed, other levels of debug messages can be used as well*/
+However, if needed, other levels of debug messages can be used as well */
 exports.info = function(message) {
 	logger.log('info', message);
 };
@@ -55,13 +57,11 @@ exports.debug = function(message) {
 	logger.log('debug', message);
 };
 
-/* Creates a new debug log file every 30 days to avoid pile up */
-schedule('monthly', function() {
-	var date = new Date();
+/* Schedule creation of new logfile regularly to avoid pile up */
+schedule(config.interval, function() {
 	logger.unpipe(writeStream);
 	writeStream.end(function() {
-		writeStream = fs.createWriteStream('./debuglogger/debuglogs/debug-' + 
-			date.toISOString().split('T')[0].slice(0,7) + '.log'); //debug-yyyy-mm.log
+		writeStream = fs.createWriteStream(makeFilename(config)); //debug-yyyy-mm.log
 		logger.pipe(writeStream);
 	});
 });
