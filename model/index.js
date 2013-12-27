@@ -31,6 +31,10 @@ schedule(archiveconfig.interval, function() {
 });
 
 exports.writelog = function(from, channelname, message, Callback) {
+	if (!filenames[channelname]) {
+		Callback(undefined, {message: 'Invalid channelname'});
+		return;
+	};
 	formattedmessage = '';
 	if (logformat.channelName) {
 		formattedmessage += channelname + logformat.separator;
@@ -46,8 +50,12 @@ exports.writelog = function(from, channelname, message, Callback) {
 	fs.writeFile(filenames[channelname], formattedmessage, {flag:'a+'}, function(err) {
 		if (err) {
 			debuglogger.error('Writing into the irc log failed!\n');
+			debuglogger.debug('fs.writeFile(filenames[channelname]=' + filenames[channelname] +
+				',formattedmessage=' + formattedmessage + ')');
+			Callback(undefined, err);
+		} else {
+			Callback();
 		};
-		Callback();
 	});
 };
 
@@ -55,12 +63,20 @@ exports.readlog = function(channelname, number, Callback) {
 	if (typeof number === 'string') {
 		number = parseInt(number);
 	};
+	if (isNaN(number)) {
+		Callback(undefined, {message:'Incorrect argument; Not a number'});
+		return;
+	};
 	number++;
 	exec('tail -n ' + number.toString() + ' ' + filenames[channelname] + ' | haste' ,
 	  function (error, stdout, stderr) {
-	  	Callback(stdout);
-	    if (error !== null) {
-	      debuglogger.error('exec error: ' + error + '\n');
+	    if (error !== null || stderr.length > 0) {
+	      debuglogger.error('exec error: ' + error + '; ' + stderr + '\n');
+	      debuglogger.debug('tail -n ' + number.toString() + ' ' + filenames[channelname] + ' | haste');
+	      Callback(undefined, (stderr.length > 0 ? {message:stderr} : error));
+	    } else {
+	    	console.log(stderr);
+	  		Callback(stdout);
 	    }
 	});
 };

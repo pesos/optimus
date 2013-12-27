@@ -6,8 +6,12 @@ exports.init = function() {
 
 	/* Process new message */
 	eventManager.on('newmessage', function(from, to, message) {
-		processmessage(from, to, message, function(reply) {
-			eventManager.emit('reply', from, to, reply);
+		processmessage(from, to, message, function(reply, err) {
+			if (!err) {
+				eventManager.emit('reply', from, to, reply);
+			} else {
+				debuglogger.error('Error in obtaining reply\n');
+			}
 		});
 	});
 };
