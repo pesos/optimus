@@ -9,10 +9,9 @@ The attempt here is to write an IRC bot, but at the same time try to give it a p
 
 ###Installation
 1. Clone the repository and change to the project directory
-2. Run ```npm install```
-3. Run ```gem install haste``` to install the haste client
-4. Download and install the latest version of [ElasticSearch](http://www.elasticsearch.org/download/)
-5. Run ```node index.js```. The bot will have connected to the set channels and started logging
+2. Run ```npm install```. Of course, you need to have [Nodejs](nodejs.org/download) first.
+3. Run ```sudo gem install haste``` to install the haste client. Again, you need to have [RubuGems](https://rubygems.org/pages/download)
+4. Run ```node index.js```. The bot will have connected to the set channels and started logging. The configurations can be tweaked in ```config.js```
 
 
 ###Contributing  
@@ -24,7 +23,7 @@ The philosophy, tech stack, coding guidelines are available in [wiki](https://gi
   * [Make a development branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository)  
   * Add your feature  
   * Test it  
-  * [Create a pull request](https://help.github.com/articles/creating-a-pull-request). If the feature is in response to an issue, reference the original issue. Find instructions to do so [here](https://github.com/blog/1506-closing-issues-via-pull-requests)  
+  * [Create a pull request](https://help.github.com/articles/creating-a-pull-request) against the project's [**dev**](https://github.com/pesos/optimus/tree/dev) branch. If the feature is in response to an issue, reference the original issue. Find instructions to do so [here](https://github.com/blog/1506-closing-issues-via-pull-requests)  
 2. Raising an issue  
   * Determine what is breaking  
   * Raise an issue [here](https://github.com/pesos/optimus/issues)  
