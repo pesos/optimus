@@ -11,9 +11,12 @@
     "irc": "~0.3.6",
     "node-schedule": "~0.1.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "~1.16.2"
+  },
   "scripts": {
-    "test": "mocha tests -R spec"
+    "start": "node index.js",
+    "test": "./node_modules/mocha/bin/mocha tests -R spec"
   },
   "repository": {
     "type": "git",
