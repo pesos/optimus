@@ -10,7 +10,7 @@ The attempt here is to write an IRC bot, but at the same time try to give it a p
 ###Installation
 1. Clone the repository and change to the project directory
 2. Run ```npm install```. Of course, you need to have [Nodejs](nodejs.org/download) first.
-3. Run ```sudo gem install haste``` to install the haste client. Again, you need to have [RubuGems](https://rubygems.org/pages/download)
+3. Run ```sudo gem install haste``` to install the haste client. Again, you need to have [RubyGems](https://rubygems.org/pages/download)
 4. Run ```node index.js```. The bot will have connected to the set channels and started logging. The configurations can be tweaked in ```config.js```
 
 
