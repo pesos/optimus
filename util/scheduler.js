@@ -1,6 +1,7 @@
 /* Scheduler - Can be used to schedule tasks to be executed at particuar time */
 
 var schedule = require('node-schedule');
+var debuglogger = require('../debuglogger');
 
 exports.scheduleTask = function(type, operation) {
 	var rule = new schedule.RecurrenceRule();
@@ -22,7 +23,12 @@ exports.scheduleTask = function(type, operation) {
 		rule.minute = 0;
 	} else if (type === 'hourly') {
 		rule.minute = 0;
+	} else {
+		return null;
 	}
+	if (typeof operation != 'function') {
+		return null;
+	};
 	var job = schedule.scheduleJob(rule, operation);
 	return job;
 };

@@ -13,6 +13,8 @@ The attempt here is to write an IRC bot, but at the same time try to give it a p
 3. Run ```sudo gem install haste``` to install the haste client. Again, you need to have [RubuGems](https://rubygems.org/pages/download)
 4. Run ```node index.js```. The bot will have connected to the set channels and started logging. The configurations can be tweaked in ```config.js```
 
+###Running tests
+Execute ```npm test``` in the project directory. If you don't have [Mocha](http://visionmedia.github.io/mocha/) installed, run ```npm install -g mocha``` first.
 
 ###Contributing  
 The philosophy, tech stack, coding guidelines are available in [wiki](https://github.com/pesos/optimus/wiki)  

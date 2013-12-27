@@ -2,7 +2,7 @@
 
 module.exports = {
 	botOpts			: {
-	    userName: 'OptimusPrime',
+	    userName: 'OptimusPrimeBot',
 	    realName: 'Optimus Prime',
 	    nick: 'optimusbot',
 	    password: 'linus',

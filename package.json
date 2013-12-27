@@ -1,6 +1,6 @@
 {
   "name": "optimusbot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Optimus is a P.R.I.M.E. (Pseudo Robotic Irc Messaging Entity). He is being developed to monitor the logs and provide assistance in IRC channels",
   "main": "index.js",
   "dependencies": {
@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": ""
+    "test": "mocha tests -R spec"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/pesos/optimus/issues"
   },
-  "homepage": "https://github.com/pesos/optimus"
+  "homepage": "https://github.com/pesos/optimus",
+  "directories": {
+    "test": "tests"
+  }
 }
