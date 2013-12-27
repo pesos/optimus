@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pesos/optimus.png?branch=master)](https://travis-ci.org/pesos/optimus)
+
 # Index
    - [Initialization of View](#initialization-of-view)
      - [view.init()](#initialization-of-view-viewinit)
