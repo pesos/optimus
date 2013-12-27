@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pesos/optimus.png?branch=master)](https://travis-ci.org/pesos/optimus)
+[![Build Status](https://travis-ci.org/pesos/optimus.png?branch=v0.1.1)](https://travis-ci.org/pesos/optimus)
 
 # Index
    - [Initialization of View](#initialization-of-view)
