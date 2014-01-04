@@ -68,14 +68,13 @@ exports.readlog = function(channelname, number, Callback) {
 		return;
 	};
 	number++;
-	exec('tail -n ' + number.toString() + ' ' + filenames[channelname] + ' | haste' ,
+	exec('tail -n ' + number.toString() + ' ' + filenames[channelname],
 	  function (error, stdout, stderr) {
 	    if (error !== null || stderr.length > 0) {
 	      debuglogger.error('exec error: ' + error + '; ' + stderr + '\n');
-	      debuglogger.debug('tail -n ' + number.toString() + ' ' + filenames[channelname] + ' | haste');
+	      debuglogger.debug('tail -n ' + number.toString() + ' ' + filenames[channelname]);
 	      Callback(undefined, (stderr.length > 0 ? {message:stderr} : error));
 	    } else {
-	    	console.log(stderr);
 	  		Callback(stdout);
 	    }
 	});
