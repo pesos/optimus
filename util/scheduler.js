@@ -38,6 +38,9 @@ exports.scheduleTask = function(type, operation) {
 	default:
 		return null;
 	};
+	if (typeof operation !== 'Function') {
+		return null;
+	};
 	var job = new cronJob(cronString, operation, null, true);
 	return job;
 };
