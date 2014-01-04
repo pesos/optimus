@@ -10,3 +10,6 @@ exports.makeFilename = require('./mkfilename');
 /* Event emitter. Used to emit and handle events */
 var events = require('events');
 exports.eventManager = new events.EventEmitter();
+
+/* Used to create pastes */
+exports.paste = require('./paste');

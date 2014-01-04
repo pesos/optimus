@@ -1,6 +1,6 @@
 {
   "name": "optimusbot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Optimus is a P.R.I.M.E. (Pseudo Robotic Irc Messaging Entity). He is being developed to monitor the logs and provide assistance in IRC channels",
   "main": "index.js",
   "dependencies": {
@@ -9,7 +9,8 @@
     "caterpillar-human": "~2.1.1",
     "elasticsearch": "~1.0.3",
     "irc": "~0.3.6",
-    "node-schedule": "~0.1.13"
+    "cron": "~1.0.1",
+    "octonode": "~0.4.2"
   },
   "devDependencies": {
     "mocha": "~1.16.2"
