@@ -71,8 +71,6 @@ exports.readlog = function(channelname, number, Callback) {
 	exec('tail -n ' + number.toString() + ' ' + filenames[channelname],
 	  function (error, stdout, stderr) {
 	    if (error !== null || stderr.length > 0) {
-	      debuglogger.error('exec error: ' + error + '; ' + stderr + '\n');
-	      debuglogger.debug('tail -n ' + number.toString() + ' ' + filenames[channelname]);
 	      Callback(undefined, (stderr.length > 0 ? {message:stderr} : error));
 	    } else {
 	  		Callback(stdout);

@@ -33,15 +33,11 @@ exports.scheduleTask = function(type, operation) {
 		cronString = '0 0 * * * *';
 		break;
 	case 'hourly':
-		cronString = '0 * * * * *0'
+		cronString = '0 * * * * *0';
 		break;
 	default:
 		return null;
 	};
-	var job = new cronJob({
-	  cronTime: cronString,
-	  onTick: operation,
-	  start: true
-	});
+	var job = new cronJob(cronString, operation, null, true);
 	return job;
 };
