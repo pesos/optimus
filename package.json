@@ -7,7 +7,6 @@
     "caterpillar": "~2.0.7",
     "caterpillar-filter": "~2.0.3",
     "caterpillar-human": "~2.1.1",
-    "elasticsearch": "~1.0.3",
     "irc": "~0.3.6",
     "cron": "~1.0.1",
     "octonode": "~0.4.2"
