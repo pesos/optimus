@@ -6,7 +6,7 @@ module.exports = function(text, channel, number, Callback) {
 	  description: number + ' lines of logs from ' + channel + ' irc channel' ,
 	  public: true,
 	  files: { 
-	  	"log.md": {
+	  	"log.txt": {
 	  		content : text
 	  	}
 	  }
