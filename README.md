@@ -5,7 +5,7 @@ Optimus
 
 Optimus is a P.R.I.M.E. (Pseudo Robotic Irc Messaging Entity). He is being developed to monitor the logs and provide assistance in [PES OpenSource Community](pesos.pes.edu)'s IRC channel [#pes-os](http://pesos.pes.edu/irc) (in freenode)  
 
-<img align="center" src="http://www.freefever.com/stock/transformers-optimus-prime-theme.jpg" alt="Optimus Prime">  
+![Optimus Prime](Optimus-Prime.jpg)
 
 The attempt here is to write an IRC bot, but at the same time try to give it a personality, that of the character [Optimus Prime](http://en.wikipedia.org/wiki/Optimus_Prime) in [Transformers](http://en.wikipedia.org/wiki/Transformers) series  
 
