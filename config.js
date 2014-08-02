@@ -4,8 +4,8 @@ module.exports = {
 	botOpts			: {
 	    userName: 'OptimusPrimeBot',
 	    realName: 'Optimus Prime',
-	    nick: 'optimusbot',
-	    password: 'linus',
+	    nick: 'primebot',
+	    password: '***',
 	    port: 6667,
 	    debug: false,
 	    showErrors: false,
